@@ -4,287 +4,280 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CycleFit — Terms of Use</title>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --pink: #C2185B;
-      --pink-light: #F8BBD9;
-      --pink-pale: #FFF0F6;
-      --dark: #1A1A2E;
-      --gray: #555;
-      --light-gray: #f5f5f5;
-      --border: #eee;
+      --accent: #FF5A7D;
+      --accent-soft: #fff0f3;
+      --dark: #111;
+      --body: #444;
+      --muted: #999;
+      --border: #e8e8e8;
+      --bg: #fff;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: 'DM Sans', sans-serif;
-      background: #fdfcfb;
-      color: var(--dark);
-      line-height: 1.75;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--body);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
     }
 
     header {
-      background: var(--dark);
-      padding: 56px 24px 48px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    header::before {
-      content: '';
-      position: absolute;
-      top: -60px; left: 50%;
-      transform: translateX(-50%);
-      width: 400px; height: 400px;
-      background: radial-gradient(circle, rgba(194,24,91,0.25) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .logo {
-      font-family: 'DM Serif Display', serif;
-      font-size: 2.6rem;
-      color: #fff;
-      letter-spacing: -0.5px;
-    }
-    .logo span { color: var(--pink); }
-    .doc-label {
-      display: inline-block;
-      margin-top: 10px;
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--pink-light);
-    }
-    .updated {
-      margin-top: 16px;
-      font-size: 0.82rem;
-      color: rgba(255,255,255,0.4);
+      padding: 64px 24px 48px;
+      border-bottom: 1px solid var(--border);
+      max-width: 680px;
+      margin: 0 auto;
     }
 
-    .nav-bar {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      padding: 20px 24px;
-      background: #fff;
+    .wordmark {
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: var(--accent);
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--dark);
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .meta { font-size: 0.83rem; color: var(--muted); }
+
+    nav {
       border-bottom: 1px solid var(--border);
+      padding: 0 24px;
       position: sticky;
       top: 0;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(8px);
       z-index: 10;
-      flex-wrap: wrap;
     }
-    .nav-bar a {
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      max-width: 680px;
+      margin: 0 auto;
+      overflow-x: auto;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 16px 14px;
       font-size: 0.82rem;
       font-weight: 500;
-      color: var(--gray);
+      color: var(--muted);
       text-decoration: none;
-      padding: 6px 14px;
-      border-radius: 20px;
-      transition: all 0.2s;
+      white-space: nowrap;
+      border-bottom: 2px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
     }
-    .nav-bar a:hover {
-      background: var(--pink-pale);
-      color: var(--pink);
+
+    nav ul li a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
     }
 
     main {
-      max-width: 720px;
+      max-width: 680px;
       margin: 0 auto;
-      padding: 56px 24px 80px;
+      padding: 0 24px 96px;
     }
 
-    .intro-box {
-      background: var(--pink-pale);
-      border-left: 4px solid var(--pink);
-      border-radius: 0 12px 12px 0;
-      padding: 20px 24px;
-      margin-bottom: 48px;
+    .intro {
+      padding: 36px 0 40px;
       font-size: 0.95rem;
-      color: var(--gray);
-    }
-
-    /* Medical disclaimer — special treatment */
-    .medical-disclaimer {
-      background: var(--dark);
-      color: #fff;
-      border-radius: 14px;
-      padding: 28px 28px;
-      margin: 20px 0;
-      position: relative;
-      overflow: hidden;
-    }
-    .medical-disclaimer::before {
-      content: '⚕';
-      position: absolute;
-      right: 24px; top: 20px;
-      font-size: 2.5rem;
-      opacity: 0.12;
-    }
-    .medical-disclaimer .disclaimer-label {
-      font-size: 0.7rem;
-      font-weight: 500;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--pink-light);
-      margin-bottom: 10px;
-    }
-    .medical-disclaimer p {
-      color: rgba(255,255,255,0.85);
-      font-size: 0.93rem;
-      margin: 0;
+      color: var(--body);
+      border-bottom: 1px solid var(--border);
     }
 
     section {
-      margin-bottom: 48px;
-      padding-bottom: 48px;
+      padding: 40px 0;
       border-bottom: 1px solid var(--border);
     }
+
     section:last-child { border-bottom: none; }
 
-    .section-number {
-      font-size: 0.7rem;
-      font-weight: 500;
-      letter-spacing: 3px;
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      color: var(--pink);
-      margin-bottom: 6px;
+      color: var(--accent);
+      margin-bottom: 10px;
     }
 
     h2 {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.45rem;
+      font-size: 1.05rem;
+      font-weight: 600;
       color: var(--dark);
       margin-bottom: 16px;
-      line-height: 1.3;
     }
 
     h3 {
-      font-size: 0.9rem;
-      font-weight: 500;
+      font-size: 0.82rem;
+      font-weight: 600;
       color: var(--dark);
-      margin: 20px 0 8px;
       text-transform: uppercase;
       letter-spacing: 1px;
+      margin: 20px 0 8px;
     }
 
     p {
-      font-size: 0.95rem;
-      color: var(--gray);
-      margin-bottom: 14px;
+      font-size: 0.92rem;
+      color: var(--body);
+      margin-bottom: 12px;
     }
+
     p:last-child { margin-bottom: 0; }
 
     ul {
       list-style: none;
-      margin: 14px 0;
+      margin: 16px 0;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
     }
+
     ul li {
-      font-size: 0.95rem;
-      color: var(--gray);
-      padding: 8px 0 8px 28px;
+      font-size: 0.92rem;
+      color: var(--body);
+      padding: 12px 16px 12px 40px;
       position: relative;
       border-bottom: 1px solid var(--border);
     }
+
     ul li:last-child { border-bottom: none; }
+
     ul li::before {
-      content: '○';
+      content: '';
       position: absolute;
-      left: 0;
-      color: var(--pink);
-      font-size: 0.75rem;
-      top: 10px;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .note {
+      background: var(--accent-soft);
+      border-left: 3px solid var(--accent);
+      padding: 14px 16px;
+      border-radius: 0 6px 6px 0;
+      font-size: 0.88rem;
+      color: var(--body);
+      margin: 16px 0;
     }
 
     /* Subscription grid */
     .sub-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 14px;
+      gap: 12px;
       margin: 20px 0;
     }
-    @media (max-width: 500px) { .sub-grid { grid-template-columns: 1fr; } }
+
+    @media (max-width: 480px) { .sub-grid { grid-template-columns: 1fr; } }
+
     .sub-card {
-      background: var(--light-gray);
-      border-radius: 10px;
-      padding: 16px 18px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
     }
-    .sub-card .sub-title {
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 2px;
+
+    .sub-card-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
-      color: var(--pink);
-      margin-bottom: 6px;
+      color: var(--accent);
+      margin-bottom: 8px;
     }
+
     .sub-card p {
       font-size: 0.88rem;
       margin: 0;
     }
 
-    .contact-block {
+    .contact-link {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
+      margin-top: 16px;
+      padding: 11px 20px;
       background: var(--dark);
       color: #fff;
-      padding: 14px 22px;
-      border-radius: 10px;
-      margin-top: 14px;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-weight: 500;
+      border-radius: 6px;
       text-decoration: none;
-      transition: background 0.2s;
+      transition: background 0.15s;
     }
-    .contact-block:hover { background: var(--pink); }
-    .contact-block span { font-size: 1.1rem; }
+
+    .contact-link:hover { background: var(--accent); }
 
     footer {
-      text-align: center;
-      padding: 32px 24px;
-      font-size: 0.8rem;
-      color: #aaa;
       border-top: 1px solid var(--border);
+      padding: 28px 24px;
+      max-width: 680px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
     }
-    footer a { color: var(--pink); text-decoration: none; }
+
+    footer p { font-size: 0.8rem; color: var(--muted); margin: 0; }
+    footer a { font-size: 0.8rem; color: var(--accent); text-decoration: none; }
   </style>
 </head>
 <body>
 
 <header>
-  <div class="logo">Cycle<span>Fit</span></div>
-  <div class="doc-label">Terms of Use</div>
-  <div class="updated">Last updated: March 2025</div>
+  <div class="wordmark">CycleFit</div>
+  <h1>Terms of Use</h1>
+  <p class="meta">Last updated: March 2025</p>
 </header>
 
-<nav class="nav-bar">
-  <a href="#medical">Medical Disclaimer</a>
-  <a href="#use">Acceptable Use</a>
-  <a href="#subscription">Subscription</a>
-  <a href="#liability">Liability</a>
-  <a href="#contact">Contact</a>
+<nav>
+  <ul>
+    <li><a href="#medical">Medical</a></li>
+    <li><a href="#use">Acceptable Use</a></li>
+    <li><a href="#subscription">Subscription</a></li>
+    <li><a href="#ip">IP</a></li>
+    <li><a href="#liability">Liability</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
 </nav>
 
 <main>
 
-  <div class="intro-box">
+  <div class="intro">
     By downloading, installing, or using CycleFit, you agree to be bound by these Terms of Use. Please read them carefully before using the application.
   </div>
 
   <section id="medical">
-    <div class="section-number">Section 01</div>
+    <div class="section-label">01</div>
     <h2>Medical Disclaimer</h2>
-    <div class="medical-disclaimer">
-      <div class="disclaimer-label">Important Notice</div>
-      <p>CycleFit is a fitness and wellness application for general informational purposes only. It does not constitute medical advice, diagnosis, or treatment, and is not a substitute for professional medical advice from a qualified healthcare provider.</p>
-    </div>
+    <div class="note">CycleFit is a fitness and wellness application for general informational purposes only. It does not constitute medical advice, diagnosis, or treatment, and is not a substitute for professional medical advice from a qualified healthcare provider.</div>
     <p>Always consult a licensed physician, gynecologist, or healthcare professional before starting any new fitness program, especially if you have a medical condition, are pregnant, postpartum, or have concerns related to your menstrual health.</p>
     <p>Cycle tracking and fitness recommendations within the app are based on general wellness data and are not intended to replace clinical evaluation.</p>
   </section>
 
   <section id="use">
-    <div class="section-number">Section 02</div>
+    <div class="section-label">02</div>
     <h2>Eligibility and Acceptable Use</h2>
     <p>CycleFit is intended for users aged 17 and older. By using this app, you confirm that you meet this age requirement.</p>
     <p>You agree to use CycleFit solely for its intended purpose. You agree not to:</p>
@@ -298,41 +291,39 @@
   </section>
 
   <section id="subscription">
-    <div class="section-number">Section 03</div>
+    <div class="section-label">03</div>
     <h2>Subscriptions and In-App Purchases</h2>
     <p>CycleFit offers a subscription plan that provides access to premium features. By subscribing, you agree to the following terms:</p>
-
     <div class="sub-grid">
       <div class="sub-card">
-        <div class="sub-title">Billing</div>
+        <div class="sub-card-label">Billing</div>
         <p>Charged to your Apple ID at confirmation of purchase, at the start of each subscription period.</p>
       </div>
       <div class="sub-card">
-        <div class="sub-title">Auto-Renewal</div>
+        <div class="sub-card-label">Auto-Renewal</div>
         <p>Subscriptions renew automatically unless cancelled at least 24 hours before the end of the current period.</p>
       </div>
       <div class="sub-card">
-        <div class="sub-title">Cancellation</div>
+        <div class="sub-card-label">Cancellation</div>
         <p>Cancel anytime via your Apple ID settings. No refunds for unused portions, except where required by law.</p>
       </div>
       <div class="sub-card">
-        <div class="sub-title">Free Trial</div>
+        <div class="sub-card-label">Free Trial</div>
         <p>If offered, any unused trial period is forfeited upon purchase of a subscription.</p>
       </div>
     </div>
-
     <p>We reserve the right to update subscription prices with advance notice. You may cancel before new pricing takes effect.</p>
   </section>
 
-  <section>
-    <div class="section-number">Section 04</div>
+  <section id="ip">
+    <div class="section-label">04</div>
     <h2>Intellectual Property</h2>
     <p>All content in CycleFit — including text, graphics, workout routines, and software — is the property of CycleFit and protected by applicable intellectual property laws.</p>
     <p>You are granted a limited, non-exclusive, non-transferable license to use CycleFit for personal, non-commercial purposes only.</p>
   </section>
 
   <section id="liability">
-    <div class="section-number">Section 05</div>
+    <div class="section-label">05</div>
     <h2>Limitation of Liability</h2>
     <p>To the fullest extent permitted by law, CycleFit and its developers shall not be liable for any indirect, incidental, or consequential damages, including but not limited to:</p>
     <ul>
@@ -345,30 +336,29 @@
   </section>
 
   <section>
-    <div class="section-number">Section 06</div>
-    <h2>Modifications to the App and Terms</h2>
-    <p>We reserve the right to modify, suspend, or discontinue any part of CycleFit at any time. We may also update these Terms of Use at any time. Continued use of the app following any changes constitutes your acceptance of the new terms.</p>
+    <div class="section-label">06</div>
+    <h2>Modifications</h2>
+    <p>We reserve the right to modify, suspend, or discontinue any part of CycleFit at any time. We may also update these Terms at any time. Continued use of the app following any changes constitutes your acceptance of the new terms.</p>
   </section>
 
   <section>
-    <div class="section-number">Section 07</div>
+    <div class="section-label">07</div>
     <h2>Governing Law</h2>
-    <p>These Terms shall be governed by and construed in accordance with the laws of France, without regard to conflict of law provisions. Any disputes shall be subject to the exclusive jurisdiction of the competent courts of France.</p>
+    <p>These Terms shall be governed by and construed in accordance with the laws of France. Any disputes shall be subject to the exclusive jurisdiction of the competent courts of France.</p>
   </section>
 
   <section id="contact">
-    <div class="section-number">Section 08</div>
+    <div class="section-label">08</div>
     <h2>Contact Us</h2>
     <p>If you have any questions or concerns regarding these Terms of Use, please reach out. We will respond within 7 business days.</p>
-    <a class="contact-block" href="mailto:app.cyclefit@gmail.com">
-      <span>✉</span> adr.carpentier@gmail.com
-    </a>
+    <a class="contact-link" href="mailto:app.cyclefit@gmail.com">✉ app.cyclefit@gmail.com</a>
   </section>
 
 </main>
 
 <footer>
-  &copy; 2025 CycleFit · <a href="privacy-policy.html">Privacy Policy</a> · All rights reserved
+  <p>&copy; 2025 CycleFit. All rights reserved.</p>
+  <a href="privacy-policy.html">Privacy Policy →</a>
 </footer>
 
 </body>
