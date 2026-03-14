@@ -4,226 +4,236 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CycleFit — Privacy Policy</title>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --pink: #C2185B;
-      --pink-light: #F8BBD9;
-      --pink-pale: #FFF0F6;
-      --dark: #1A1A2E;
-      --gray: #555;
-      --light-gray: #f5f5f5;
-      --border: #eee;
+      --accent: #FF5A7D;
+      --accent-soft: #fff0f3;
+      --dark: #111;
+      --body: #444;
+      --muted: #999;
+      --border: #e8e8e8;
+      --bg: #fff;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: 'DM Sans', sans-serif;
-      background: #fdfcfb;
-      color: var(--dark);
-      line-height: 1.75;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--body);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
     }
 
-    /* Header */
     header {
-      background: var(--dark);
-      padding: 56px 24px 48px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    header::before {
-      content: '';
-      position: absolute;
-      top: -60px; left: 50%;
-      transform: translateX(-50%);
-      width: 400px; height: 400px;
-      background: radial-gradient(circle, rgba(194,24,91,0.25) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .logo {
-      font-family: 'DM Serif Display', serif;
-      font-size: 2.6rem;
-      color: #fff;
-      letter-spacing: -0.5px;
-    }
-    .logo span { color: var(--pink); }
-    .doc-label {
-      display: inline-block;
-      margin-top: 10px;
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--pink-light);
-    }
-    .updated {
-      margin-top: 16px;
-      font-size: 0.82rem;
-      color: rgba(255,255,255,0.4);
+      padding: 64px 24px 48px;
+      border-bottom: 1px solid var(--border);
+      max-width: 680px;
+      margin: 0 auto;
     }
 
-    /* Nav pill */
-    .nav-bar {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      padding: 20px 24px;
-      background: #fff;
+    .wordmark {
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: var(--accent);
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--dark);
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .meta {
+      font-size: 0.83rem;
+      color: var(--muted);
+    }
+
+    nav {
       border-bottom: 1px solid var(--border);
+      padding: 0 24px;
       position: sticky;
       top: 0;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(8px);
       z-index: 10;
     }
-    .nav-bar a {
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      max-width: 680px;
+      margin: 0 auto;
+      overflow-x: auto;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 16px 14px;
       font-size: 0.82rem;
       font-weight: 500;
-      color: var(--gray);
+      color: var(--muted);
       text-decoration: none;
-      padding: 6px 14px;
-      border-radius: 20px;
-      transition: all 0.2s;
-    }
-    .nav-bar a:hover, .nav-bar a.active {
-      background: var(--pink-pale);
-      color: var(--pink);
+      white-space: nowrap;
+      border-bottom: 2px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
     }
 
-    /* Main layout */
+    nav ul li a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
     main {
-      max-width: 720px;
+      max-width: 680px;
       margin: 0 auto;
-      padding: 56px 24px 80px;
+      padding: 0 24px 96px;
     }
 
-    /* Intro box */
-    .intro-box {
-      background: var(--pink-pale);
-      border-left: 4px solid var(--pink);
-      border-radius: 0 12px 12px 0;
-      padding: 20px 24px;
-      margin-bottom: 48px;
+    .intro {
+      padding: 36px 0 40px;
       font-size: 0.95rem;
-      color: var(--gray);
-    }
-
-    /* Section */
-    section {
-      margin-bottom: 48px;
-      padding-bottom: 48px;
+      color: var(--body);
       border-bottom: 1px solid var(--border);
     }
+
+    section {
+      padding: 40px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
     section:last-child { border-bottom: none; }
 
-    .section-number {
-      font-size: 0.7rem;
-      font-weight: 500;
-      letter-spacing: 3px;
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      color: var(--pink);
-      margin-bottom: 6px;
+      color: var(--accent);
+      margin-bottom: 10px;
     }
 
     h2 {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.45rem;
+      font-size: 1.05rem;
+      font-weight: 600;
       color: var(--dark);
       margin-bottom: 16px;
-      line-height: 1.3;
     }
 
     p {
-      font-size: 0.95rem;
-      color: var(--gray);
-      margin-bottom: 14px;
+      font-size: 0.92rem;
+      color: var(--body);
+      margin-bottom: 12px;
     }
+
     p:last-child { margin-bottom: 0; }
 
     ul {
       list-style: none;
-      margin: 14px 0;
+      margin: 16px 0;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
     }
+
     ul li {
-      font-size: 0.95rem;
-      color: var(--gray);
-      padding: 8px 0 8px 28px;
+      font-size: 0.92rem;
+      color: var(--body);
+      padding: 12px 16px 12px 40px;
       position: relative;
       border-bottom: 1px solid var(--border);
     }
+
     ul li:last-child { border-bottom: none; }
+
     ul li::before {
-      content: '○';
+      content: '';
       position: absolute;
-      left: 0;
-      color: var(--pink);
-      font-size: 0.75rem;
-      top: 10px;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
     }
 
-    .highlight-box {
-      background: var(--light-gray);
-      border-radius: 10px;
-      padding: 16px 20px;
+    .note {
+      background: var(--accent-soft);
+      border-left: 3px solid var(--accent);
+      padding: 14px 16px;
+      border-radius: 0 6px 6px 0;
+      font-size: 0.88rem;
+      color: var(--body);
       margin: 16px 0;
-      font-size: 0.9rem;
-      color: var(--gray);
-      font-style: italic;
     }
 
-    /* Contact */
-    .contact-block {
+    .contact-link {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
+      margin-top: 16px;
+      padding: 11px 20px;
       background: var(--dark);
       color: #fff;
-      padding: 14px 22px;
-      border-radius: 10px;
-      margin-top: 14px;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-weight: 500;
+      border-radius: 6px;
       text-decoration: none;
-      transition: background 0.2s;
+      transition: background 0.15s;
     }
-    .contact-block:hover { background: var(--pink); }
-    .contact-block span { font-size: 1.1rem; }
 
-    /* Footer */
+    .contact-link:hover { background: var(--accent); }
+
     footer {
-      text-align: center;
-      padding: 32px 24px;
-      font-size: 0.8rem;
-      color: #aaa;
       border-top: 1px solid var(--border);
+      padding: 28px 24px;
+      max-width: 680px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
     }
-    footer a { color: var(--pink); text-decoration: none; }
+
+    footer p { font-size: 0.8rem; color: var(--muted); margin: 0; }
+    footer a { font-size: 0.8rem; color: var(--accent); text-decoration: none; }
   </style>
 </head>
 <body>
 
 <header>
-  <div class="logo">Cycle<span>Fit</span></div>
-  <div class="doc-label">Privacy Policy</div>
-  <div class="updated">Last updated: March 2025</div>
+  <div class="wordmark">CycleFit</div>
+  <h1>Privacy Policy</h1>
+  <p class="meta">Last updated: March 2025</p>
 </header>
 
-<nav class="nav-bar">
-  <a href="#data">Data Collected</a>
-  <a href="#storage">Storage</a>
-  <a href="#sharing">Sharing</a>
-  <a href="#rights">Your Rights</a>
-  <a href="#contact">Contact</a>
+<nav>
+  <ul>
+    <li><a href="#data">Data</a></li>
+    <li><a href="#storage">Storage</a></li>
+    <li><a href="#sharing">Sharing</a></li>
+    <li><a href="#rights">Your Rights</a></li>
+    <li><a href="#health">Health Data</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
 </nav>
 
 <main>
 
-  <div class="intro-box">
-    CycleFit is committed to protecting your privacy. This policy explains exactly what data we collect, how it is stored, and your rights as a user. We believe your health data belongs to you — and only you.
+  <div class="intro">
+    CycleFit is committed to protecting your privacy. This policy explains what data we collect, how it is stored, and your rights as a user. Your health data belongs to you — and only you.
   </div>
 
   <section id="data">
-    <div class="section-number">Section 01</div>
+    <div class="section-label">01</div>
     <h2>Information We Collect</h2>
     <p>To deliver personalized fitness recommendations adapted to your menstrual cycle, CycleFit collects and stores the following information directly on your device:</p>
     <ul>
@@ -232,67 +242,66 @@
       <li>Fitness preferences and workout history</li>
       <li>App settings and preferences</li>
     </ul>
-    <div class="highlight-box">We do not collect your name, email address, or any personally identifiable information unless you voluntarily provide it for support purposes.</div>
+    <div class="note">We do not collect your name, email address, or any personally identifiable information unless you voluntarily provide it for support purposes.</div>
   </section>
 
   <section id="storage">
-    <div class="section-number">Section 02</div>
+    <div class="section-label">02</div>
     <h2>How Your Data Is Stored</h2>
     <p>All data collected by CycleFit is stored exclusively and locally on your device. We do not operate external servers, and your health and fitness data is never transmitted to any remote server.</p>
     <p>Your data remains private on your iPhone or iPad, protected by iOS's built-in encryption and device security features.</p>
   </section>
 
   <section id="sharing">
-    <div class="section-number">Section 03</div>
+    <div class="section-label">03</div>
     <h2>Sharing With Third Parties</h2>
     <p>We do not sell, share, rent, or otherwise disclose your personal data to any third party. CycleFit does not use third-party analytics, advertising networks, or data brokers.</p>
     <p>No data is shared with any technology provider. The app functions entirely on-device.</p>
   </section>
 
   <section id="rights">
-    <div class="section-number">Section 04</div>
+    <div class="section-label">04</div>
     <h2>Your Rights and Data Deletion</h2>
     <p>You have full control over your data at all times. Since all information is stored locally on your device, you can:</p>
     <ul>
-      <li>Delete all CycleFit data by uninstalling the application from your device</li>
+      <li>Delete all CycleFit data by uninstalling the application</li>
       <li>Reset your data within the app via the Settings menu</li>
       <li>Review your data directly within the app at any time</li>
     </ul>
     <p>Once the app is deleted, all associated data is permanently removed from your device and cannot be recovered by us.</p>
   </section>
 
-  <section>
-    <div class="section-number">Section 05</div>
+  <section id="health">
+    <div class="section-label">05</div>
     <h2>Health and Sensitive Data</h2>
     <p>CycleFit processes health-related information, including menstrual cycle data. We treat this information with the highest level of care. This data is never used for advertising purposes and never leaves your device.</p>
     <p>If CycleFit integrates with Apple HealthKit in the future, any such integration will be disclosed in an updated version of this policy, and your explicit consent will be requested.</p>
   </section>
 
   <section>
-    <div class="section-number">Section 06</div>
+    <div class="section-label">06</div>
     <h2>Children's Privacy</h2>
     <p>CycleFit is intended for users aged 17 and older. We do not knowingly collect personal data from individuals under the age of 17. If you believe a minor has provided personal data through the app, please contact us immediately.</p>
   </section>
 
   <section>
-    <div class="section-number">Section 07</div>
+    <div class="section-label">07</div>
     <h2>Changes to This Policy</h2>
-    <p>We may update this Privacy Policy from time to time to reflect changes in the app or legal requirements. We will notify you of any significant changes by displaying a notice within the app. Continued use of CycleFit after such changes constitutes your acceptance of the updated policy.</p>
+    <p>We may update this Privacy Policy from time to time to reflect changes in the app or applicable legal requirements. We will notify you of any significant changes by displaying a notice within the app. Continued use of CycleFit after such changes constitutes your acceptance of the updated policy.</p>
   </section>
 
   <section id="contact">
-    <div class="section-number">Section 08</div>
+    <div class="section-label">08</div>
     <h2>Contact Us</h2>
-    <p>If you have any questions, concerns, or requests regarding this Privacy Policy, please contact us. We will respond within 7 business days.</p>
-    <a class="contact-block" href="mailto:app.cyclefit@gmail.com">
-      <span>✉</span> adr.carpentier@gmail.com
-    </a>
+    <p>If you have any questions or requests regarding this Privacy Policy, please reach out. We will respond within 7 business days.</p>
+    <a class="contact-link" href="mailto:app.cyclefit@gmail.com">✉ app.cyclefit@gmail.com</a>
   </section>
 
 </main>
 
 <footer>
-  &copy; 2025 CycleFit · <a href="terms-of-use.html">Terms of Use</a> · All rights reserved
+  <p>&copy; 2025 CycleFit. All rights reserved.</p>
+  <a href="terms-of-use.html">Terms of Use →</a>
 </footer>
 
 </body>
